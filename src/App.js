@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Canvas } from '@react-three/fiber';
+// import Knife from './components/Knife';
+import { Environment, OrbitControls, Sky } from '@react-three/drei';
+import { LinearSRGBColorSpace } from 'three';
+import { lazy } from 'react';
+import { CONTROLS, ORBIT, TESTING } from './utils/constants.js';
+import { Leva } from 'leva';
+const Knife = lazy(() => import('./components/Knife.jsx'));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Canvas
+      gl={{
+        antialias: false,
+        powerPreference: "high-performance",
+        stencil: false,
+        outputColorSpace: LinearSRGBColorSpace
+      }}
+      className={`bg-transparent ${TESTING? 'h-96' : ''}`}
+      camera={{
+        fov: 45,
+        near: 1,
+        far: 500,
+        filmGauge: 100,
+      }}
+    >
+      <Leva collapsed={false} hidden={!CONTROLS} />
+      <hemisphereLight />
+      <Knife scale={10} position={[0, -.3, 3]} />
+      <Environment preset='apartment' />
+      {ORBIT ? <OrbitControls /> : <></>}
+    </Canvas>
   );
 }
 
