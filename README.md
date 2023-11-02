@@ -70,7 +70,7 @@ Make sure you have an element with class name `knife-gl` in your webpage.
 
 The canvas will fit inside that element.
 
-# Example
+### Example
 
 check `public/index.html` as reference example.
 
