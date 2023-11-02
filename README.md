@@ -64,6 +64,16 @@ export const START = 'top top';
 export const END = 'top bottom';
 ```
 
+## Injecting the code
+
+Make sure you have an element with class name `knife-gl` in your webpage.
+
+The canvas will fit inside that element.
+
+# Example
+
+check `public/index.html` as reference example.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
