@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber';
 // import Knife from './components/Knife';
-import { Environment, OrbitControls, Sky } from '@react-three/drei';
+import { Environment, OrbitControls } from '@react-three/drei';
 import { LinearSRGBColorSpace } from 'three';
 import { lazy } from 'react';
 import { CONTROLS, ORBIT, TESTING } from './utils/constants.js';

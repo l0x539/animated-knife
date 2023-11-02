@@ -17,7 +17,6 @@ if (typeof document !== "undefined") {
 }
 const Knife = (props) => {
   const knife = useRef();
-  const tl = useRef(null);
   const { nodes, materials, animations } = useGLTF("/models/knife.glb");
   const { actions } = useAnimations(animations, knife);
 
