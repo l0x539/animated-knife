@@ -1,3 +1,69 @@
+# React 3D Animated Model Component (Knife)
+
+This React component allows you to create an animated 3D model that responds to scroll triggers within a webpage. The animation can be controlled through various constants defined in the `src/utils/constants.js` file. This README will provide an overview of these variables and their functionality.
+
+## Installation
+
+Before using this component, ensure that you have React and React Three Fiber set up in your project.
+
+## Configuration
+
+In order to integrate and customize the animation properly, you can use the following variables in the `src/utils/constants.js` file:
+
+### TESTING
+
+- Type: Boolean
+- Description: This variable enables or disables the scroll trigger markers on the page for testing and debugging purposes. Set it to `true` to show markers, and `false` to hide them.
+
+### CONTROLS
+
+- Type: Boolean
+- Description: Use this variable to enable or disable manual controls for the model and scroll progress. When set to `true`, you can control the model's position and scale.
+
+### ORBIT
+
+- Type: Boolean
+- Description: This variable enables or disables orbit controls for the 3D canvas. When set to `true`, users can interact with the 3D model using their mouse or touch input.
+
+### TRIGGER
+
+- Type: String (Query Selector)
+- Description: Specify the query selector string for the element that triggers the start of the animation. This element will be the reference point for initiating the animation.
+
+### END_TRIGGER
+
+- Type: String (Query Selector)
+- Description: Set the query selector string for the element that triggers the end of the animation. The animation will conclude when this element enters the viewport.
+
+### START
+
+- Type: String
+- Description: Define the position of the trigger start element concerning the viewport. Values like 'top top', 'top bottom', etc., control when the animation begins in relation to the trigger element's position.
+
+### END
+
+- Type: String
+- Description: Specify the position of the end trigger element concerning the viewport. The animation will finish when the end trigger element reaches the specified position, e.g., 'top top', 'top bottom', etc.
+
+## Usage
+
+To use this component, inject it into a div section on your webpage. Make sure to configure the constants in `src/utils/constants.js` to achieve the desired behavior for your 3D model animation.
+
+## Example
+
+Here's an example of how to use the constants in your `src/utils/constants.js`:
+
+```javascript
+// src/utils/constants.js
+export const TESTING = false;
+export const CONTROLS = true;
+export const ORBIT = true;
+export const TRIGGER = '.start-trigger';
+export const END_TRIGGER = '.end-trigger';
+export const START = 'top top';
+export const END = 'top bottom';
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
