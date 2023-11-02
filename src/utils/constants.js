@@ -1,4 +1,4 @@
-export const TESTING = false;
+export const TESTING = true;
 export const CONTROLS = false;
 export const ORBIT = false;
 export const TRIGGER = '.start-trigger';
