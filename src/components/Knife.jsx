@@ -8,7 +8,7 @@ import { useFrame } from "@react-three/fiber";
 import { useControls } from "leva";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-import { CONTROLS, END, END_TRIGGER, START, TESTING, TRIGGER } from "../utils/constants";
+import { CONTROLS, END, END_TRIGGER, KNIFE_PATH, START, TESTING, TRIGGER } from "../utils/constants";
 import { CustomEase } from "gsap/CustomEase";
 
 if (typeof document !== "undefined") {
@@ -17,7 +17,7 @@ if (typeof document !== "undefined") {
 }
 const Knife = (props) => {
   const knife = useRef();
-  const { nodes, materials, animations } = useGLTF("/models/knife.glb");
+  const { nodes, materials, animations } = useGLTF(KNIFE_PATH);
   const { actions } = useAnimations(animations, knife);
 
   const {settings} = useMemo(() => {
@@ -504,4 +504,4 @@ const Knife = (props) => {
 
 export default Knife;
 
-useGLTF.preload("/models/knife.glb");
+useGLTF.preload(KNIFE_PATH);
