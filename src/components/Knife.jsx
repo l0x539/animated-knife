@@ -24,7 +24,8 @@ const Knife = (props) => {
     return {
       settings: {
         progress: 0
-      }
+      },
+      translateY: 1 // TO -.3
     }
   }, [])
 
@@ -53,11 +54,10 @@ const Knife = (props) => {
   const [duration, setDuration] = useState(0);
   const [mixerAction1, setMixer1] = useState(null);
   const [mixerAction2, setMixer2] = useState(null);
-  const customEase = useMemo(() => CustomEase.create("custom", "M0,0,C0.4,0.018,0.398,0.3,0.507,0.512,0.6,0.693,0.6,0.984,1,1"), []);
+  // const customEase = useMemo(() => CustomEase.create("custom", "M0,0,C0.4,0.018,0.398,0.3,0.507,0.512,0.6,0.693,0.6,0.984,1,1"), []);
 
   useEffect(() => {
     gsap.to(settings,{
-        ease: customEase,
         scrollTrigger: {
           trigger: TRIGGER,
           endTrigger: END_TRIGGER,
@@ -66,6 +66,10 @@ const Knife = (props) => {
           // refreshPriority: -1,
           markers: TESTING,
           onUpdate: t => {
+            gsap.to(settings, {
+              translateY: t.progress > 0 ? -.3 : 1,
+              ease: 'power1.out'
+            })
             gsap.to(settings, { // ADD gsap animation options here.
               progress: t.progress,
               ease: 'power1.out',
@@ -90,7 +94,7 @@ const Knife = (props) => {
     //     }
     //   }
     // });
-  }, [customEase, settings]);
+  }, [settings]);
 
   useEffect(() => {
     setDuration(actions['node2Action'].getClip().duration-.100000000000001);
@@ -108,11 +112,13 @@ const Knife = (props) => {
       actions['Empty.001Action'].getMixer().update(.1)
       actions['node2Action'].play()
       actions['Empty.001Action'].play()
+
+      knife.current.position.setY(settings.translateY)
     }
   });
 
   return (
-    <group ref={knife} {...({...props, ...(CONTROLS ? {position: [position.x, position.y, position.z], scale} : {})})} dispose={null}>
+    <group ref={knife} visible {...({...props, ...(CONTROLS ? {position: [position.x, position.y, position.z], scale} : {})})} dispose={null}>
       <group name="Scene">
         <group
           name="Empty001"
