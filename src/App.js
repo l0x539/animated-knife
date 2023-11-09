@@ -26,7 +26,7 @@ function App() {
     >
       <Leva collapsed={false} hidden={!CONTROLS} />
       <hemisphereLight />
-      <Knife scale={10} position={[0, 0, 3]} />
+      <Knife scale={7.6} position={[0, -.3, 3]} />
       <Environment preset='apartment' />
       {ORBIT ? <OrbitControls /> : <></>}
     </Canvas>
