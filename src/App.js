@@ -5,6 +5,8 @@ import { LinearSRGBColorSpace } from 'three';
 import { lazy } from 'react';
 import { CONTROLS, ORBIT, TESTING } from './utils/constants.js';
 import { Leva } from 'leva';
+import { EffectComposer, N8AO } from "@react-three/postprocessing"
+
 const Knife = lazy(() => import('./components/Knife.jsx'));
 
 function App() {
@@ -27,8 +29,11 @@ function App() {
       <Leva collapsed={false} hidden={!CONTROLS} />
       <hemisphereLight />
       <Knife scale={7.6} position={[0, -.3, 3]} />
-      <Environment preset='apartment' />
+      <Environment preset='forest' blur={.5} />
       {ORBIT ? <OrbitControls /> : <></>}
+      <EffectComposer disableNormalPass >
+        <N8AO aoRadius={50} distanceFalloff={0.2} intensity={6} screenSpaceRadius halfRes />
+      </EffectComposer>
     </Canvas>
   );
 }
