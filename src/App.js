@@ -6,10 +6,15 @@ import { lazy } from 'react';
 import { CONTROLS, ORBIT, TESTING } from './utils/constants.js';
 import { Leva } from 'leva';
 import { EffectComposer, N8AO } from "@react-three/postprocessing"
+import { useMediaQuery } from "react-responsive";
+import './App.css';
 
-const Knife = lazy(() => import('./components/Knife.jsx'));
+const KnifeSection = lazy(() => import('./components/KnifeSection.jsx'));
 
 function App() {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 });
+
   return (
     <Canvas
       gl={{
@@ -28,7 +33,7 @@ function App() {
     >
       <Leva collapsed={false} hidden={!CONTROLS} />
       <hemisphereLight />
-      <Knife scale={7.6} position={[0, -.3, 3]} />
+      <KnifeSection scale={isMobile || isTablet ? 5 : 7.6} position={[0, -.3, 3]} />
       <Environment preset='forest' blur={.5} />
       {ORBIT ? <OrbitControls /> : <></>}
       <EffectComposer disableNormalPass >
