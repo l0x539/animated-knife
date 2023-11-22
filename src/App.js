@@ -21,7 +21,6 @@ function App() {
         antialias: false,
         powerPreference: "high-performance",
         stencil: false,
-        outputColorSpace: LinearSRGBColorSpace
       }}
       className={`bg-transparent ${TESTING? 'h-96' : ''}`}
       camera={{
@@ -34,11 +33,11 @@ function App() {
       <Leva collapsed={false} hidden={!CONTROLS} />
       <hemisphereLight />
       <KnifeSection scale={isMobile || isTablet ? 5 : 7.6} position={[0, -.3, 3]} />
-      <Environment preset='forest' blur={.5} />
+      <Environment preset='warehouse' blur={.5} />
       {ORBIT ? <OrbitControls /> : <></>}
       <EffectComposer disableNormalPass >
-        <N8AO aoRadius={50} distanceFalloff={0.2} intensity={6} screenSpaceRadius halfRes />
-      </EffectComposer>
+        <N8AO aoRadius={50} distanceFalloff={0.2} intensity={2} screenSpaceRadius halfRes />
+    </EffectComposer>
     </Canvas>
   );
 }

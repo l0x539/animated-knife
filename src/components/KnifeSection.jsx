@@ -163,382 +163,49 @@ const Knife = forwardRef(({ nodes, materials, ...props }, knife) => {
   return (
     <group ref={knife} {...props} visible dispose={null}>
       <group name="Scene">
-        <group
-          name="Empty001"
-          position={[0, 0.051, 0]}
-          rotation={[3.117, -0.113, 2.927]}
-          scale={0.126}
-        >
-          <group
-            name="Armature"
-            position={[-0.043, -0.226, -0.074]}
-            rotation={[3.126, 0.118, 3.139]}
-            scale={0.101}
-          >
-            <skinnedMesh
-              name="node1"
-              geometry={nodes.node1.geometry}
-              material={materials["handle mat"]}
-              skeleton={nodes.node1.skeleton}
-            />
+        <group name="Empty001" position={[0, 0.051, 0]} rotation={[3.117, -0.113, 2.927]} scale={0.126}>
+          <group name="Armature" position={[-0.043, -0.226, -0.074]} rotation={[3.126, 0.118, 3.139]} scale={0.101}>
             <primitive object={nodes.Bone} />
             <primitive object={nodes.neutral_bone} />
+            <skinnedMesh name="node1" geometry={nodes.node1.geometry} material={materials['handle mat']} skeleton={nodes.node1.skeleton} />
           </group>
-          <mesh
-            name="node0"
-            castShadow
-            receiveShadow
-            geometry={nodes.node0.geometry}
-            material={materials.Part__Feature}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node10"
-            castShadow
-            receiveShadow
-            geometry={nodes.node10.geometry}
-            material={materials.Part__Feature013}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node11"
-            castShadow
-            receiveShadow
-            geometry={nodes.node11.geometry}
-            material={materials.Part__Feature014}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node12"
-            castShadow
-            receiveShadow
-            geometry={nodes.node12.geometry}
-            material={materials.Part__Feature015}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node13"
-            castShadow
-            receiveShadow
-            geometry={nodes.node13.geometry}
-            material={materials.Part__Feature016}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node14"
-            castShadow
-            receiveShadow
-            geometry={nodes.node14.geometry}
-            material={materials.Part__Feature017}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node15"
-            castShadow
-            receiveShadow
-            geometry={nodes.node15.geometry}
-            material={materials.Part__Feature018}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node16"
-            castShadow
-            receiveShadow
-            geometry={nodes.node16.geometry}
-            material={materials.Part__Feature019}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node17"
-            castShadow
-            receiveShadow
-            geometry={nodes.node17.geometry}
-            material={materials.Part__Feature020}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node18"
-            castShadow
-            receiveShadow
-            geometry={nodes.node18.geometry}
-            material={materials.Part__Feature021}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node19"
-            castShadow
-            receiveShadow
-            geometry={nodes.node19.geometry}
-            material={materials.Part__Feature022}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node2"
-            castShadow
-            receiveShadow
-            geometry={nodes.node2.geometry}
-            material={materials["blade mat"]}
-            position={[-0.004, 0.017, 0]}
-            rotation={[-1.571, 1.536, -3.142]}
-            scale={10.712}
-          >
-            <mesh
-              name="D2_logo"
-              castShadow
-              receiveShadow
-              geometry={nodes.D2_logo.geometry}
-              material={materials["wesn logo"]}
-              position={[-0.008, -0.005, -0.007]}
-              rotation={[0.002, 0.019, -3.139]}
-              scale={0.003}
-            />
-            <mesh
-              name="node25"
-              castShadow
-              receiveShadow
-              geometry={nodes.node25.geometry}
-              material={materials["blade mat"]}
-            />
-            <mesh
-              name="node3"
-              castShadow
-              receiveShadow
-              geometry={nodes.node3.geometry}
-              material={materials["blade mat"]}
-            />
-            <mesh
-              name="Wesn"
-              castShadow
-              receiveShadow
-              geometry={nodes.Wesn.geometry}
-              material={materials["wesn logo"]}
-              position={[0.001, -0.005, 0]}
-              rotation={[-1.569, -0.003, 0.006]}
-              scale={[0.828, 0.792, 0.828]}
-            />
+          <mesh name="node2" geometry={nodes.node2.geometry} material={materials['blade mat']} position={[-0.004, 0.017, 0]} rotation={[-1.571, 1.536, -3.142]} scale={10.712}>
+            <mesh name="D2_logo" geometry={nodes.D2_logo.geometry} material={materials['wesn logo']} position={[-0.008, -0.005, -0.007]} rotation={[0.002, 0.019, -3.139]} scale={0.003} />
+            <mesh name="node25" geometry={nodes.node25.geometry} material={materials['blade mat']} />
+            <mesh name="node3" geometry={nodes.node3.geometry} material={materials['blade mat']} />
+            <mesh name="Wesn" geometry={nodes.Wesn.geometry} material={materials['wesn logo']} position={[0.001, -0.005, 0]} rotation={[-1.569, -0.003, 0.006]} scale={[0.828, 0.792, 0.828]} />
           </mesh>
-          <mesh
-            name="node20"
-            castShadow
-            receiveShadow
-            geometry={nodes.node20.geometry}
-            material={materials.Part__Feature023}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node21"
-            castShadow
-            receiveShadow
-            geometry={nodes.node21.geometry}
-            material={materials.Part__Feature024}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node22"
-            castShadow
-            receiveShadow
-            geometry={nodes.node22.geometry}
-            material={materials["blade mat"]}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node23"
-            castShadow
-            receiveShadow
-            geometry={nodes.node23.geometry}
-            material={materials["blade mat"]}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node24"
-            castShadow
-            receiveShadow
-            geometry={nodes.node24.geometry}
-            material={materials["blade mat"]}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node26"
-            castShadow
-            receiveShadow
-            geometry={nodes.node26.geometry}
-            material={materials["handle mat"]}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node27"
-            castShadow
-            receiveShadow
-            geometry={nodes.node27.geometry}
-            material={materials.Part__Feature030}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node28"
-            castShadow
-            receiveShadow
-            geometry={nodes.node28.geometry}
-            material={materials["blade mat"]}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node29"
-            castShadow
-            receiveShadow
-            geometry={nodes.node29.geometry}
-            material={materials.Part__Feature032}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node30"
-            castShadow
-            receiveShadow
-            geometry={nodes.node30.geometry}
-            material={materials["Brushed aluminium"]}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node31"
-            castShadow
-            receiveShadow
-            geometry={nodes.node31.geometry}
-            material={materials["blade mat"]}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node32"
-            castShadow
-            receiveShadow
-            geometry={nodes.node32.geometry}
-            material={materials.Part__Feature035}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node33"
-            castShadow
-            receiveShadow
-            geometry={nodes.node33.geometry}
-            material={materials["blade mat"]}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node34"
-            castShadow
-            receiveShadow
-            geometry={nodes.node34.geometry}
-            material={materials["blade mat"]}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node4"
-            castShadow
-            receiveShadow
-            geometry={nodes.node4.geometry}
-            material={materials.Part__Feature007}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node5"
-            castShadow
-            receiveShadow
-            geometry={nodes.node5.geometry}
-            material={materials.Part__Feature008}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node6"
-            castShadow
-            receiveShadow
-            geometry={nodes.node6.geometry}
-            material={materials.Part__Feature009}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node7"
-            castShadow
-            receiveShadow
-            geometry={nodes.node7.geometry}
-            material={materials.Part__Feature010}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node8"
-            castShadow
-            receiveShadow
-            geometry={nodes.node8.geometry}
-            material={materials.Part__Feature011}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
-          <mesh
-            name="node9"
-            castShadow
-            receiveShadow
-            geometry={nodes.node9.geometry}
-            material={materials.Part__Feature012}
-            position={[-0.004, 0.017, 0]}
-            rotation={[Math.PI / 2, -Math.PI / 2, 0]}
-            scale={10.712}
-          />
+          <mesh name="node0" geometry={nodes.node0.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node10" geometry={nodes.node10.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node11" geometry={nodes.node11.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node12" geometry={nodes.node12.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node13" geometry={nodes.node13.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node14" geometry={nodes.node14.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node15" geometry={nodes.node15.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node16" geometry={nodes.node16.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node17" geometry={nodes.node17.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node18" geometry={nodes.node18.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node19" geometry={nodes.node19.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node20" geometry={nodes.node20.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node21" geometry={nodes.node21.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node22" geometry={nodes.node22.geometry} material={materials['blade mat']} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node23" geometry={nodes.node23.geometry} material={materials['blade mat']} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node24" geometry={nodes.node24.geometry} material={materials['blade mat']} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node26" geometry={nodes.node26.geometry} material={materials['handle mat']} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node27" geometry={nodes.node27.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node28" geometry={nodes.node28.geometry} material={materials.node28_baked} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node29" geometry={nodes.node29.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node30" geometry={nodes.node30.geometry} material={materials.node30_baked} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node31" geometry={nodes.node31.geometry} material={materials['blade mat']} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node32" geometry={nodes.node32.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node33" geometry={nodes.node33.geometry} material={materials['blade mat']} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node34" geometry={nodes.node34.geometry} material={materials['blade mat']} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node4" geometry={nodes.node4.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node5" geometry={nodes.node5.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node6" geometry={nodes.node6.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node7" geometry={nodes.node7.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node8" geometry={nodes.node8.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
+          <mesh name="node9" geometry={nodes.node9.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
         </group>
       </group>
     </group>
