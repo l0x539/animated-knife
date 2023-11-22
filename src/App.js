@@ -33,6 +33,7 @@ function App() {
     >
       <Leva collapsed={false} hidden={!CONTROLS} />
       <hemisphereLight />
+      <directionalLight color={'white'} position={[0, 20, 5]} />
       <KnifeSection scale={isMobile || isTablet ? 5 : 7.6} position={[0, -.3, 3]} />
       <Environment preset='forest' blur={.5} />
       {ORBIT ? <OrbitControls /> : <></>}
