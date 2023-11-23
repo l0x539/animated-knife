@@ -23,7 +23,7 @@ function App() {
         stencil: false,
         outputColorSpace: LinearSRGBColorSpace
       }}
-      className={`bg-transparent ${TESTING? 'h-96' : ''}`}
+      className={`bg-transparent ${TESTING ? 'h-96' : ''}`}
       camera={{
         fov: 45,
         near: 1,
@@ -32,13 +32,15 @@ function App() {
       }}
     >
       <Leva collapsed={false} hidden={!CONTROLS} />
-      <hemisphereLight />
-      <directionalLight color={'white'} position={[0, 20, 5]} />
+      <directionalLight color={'white'} intensity={8} position={[-10, 5, 10]} />
       <KnifeSection scale={isMobile || isTablet ? 5 : 7.6} position={[0, -.3, 3]} />
-      <Environment preset='forest' blur={.5} />
+      <Environment
+        preset='city'
+        blur={0.5}
+      />
       {ORBIT ? <OrbitControls /> : <></>}
       <EffectComposer disableNormalPass >
-        <N8AO aoRadius={50} distanceFalloff={0.2} intensity={6} screenSpaceRadius halfRes />
+        <N8AO aoRadius={50} distanceFalloff={0.2} intensity={3} screenSpaceRadius halfRes />
       </EffectComposer>
     </Canvas>
   );
