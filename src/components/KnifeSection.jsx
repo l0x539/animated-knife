@@ -167,10 +167,10 @@ const Knife = forwardRef(({ nodes, materials, ...props }, knife) => {
       <group name="Scene">
         <group name="Empty001" position={[0, 0.051, 0]} rotation={[3.117, -0.113, 2.927]} scale={0.126}>
           <mesh name="node2" geometry={nodes.node2.geometry} material={materials['blade mat']} position={[-0.004, 0.017, 0]} rotation={[-1.571, 1.536, -3.142]} scale={10.712}>
-            <mesh name="D2_logo" geometry={nodes.D2_logo.geometry} material={materials['wesn logo']} position={[-0.008, -0.005, -0.007]} rotation={[0.002, 0.019, -3.139]} scale={0.003} />
+            <mesh name="D2_logo" geometry={nodes.D2_logo.geometry} material={materials['D2 logo_baked']} position={[-0.008, -0.0054, -0.007]} rotation={[0.002, 0.019, -3.139]} scale={0.003} />
             <mesh name="node25" geometry={nodes.node25.geometry} material={materials['blade mat']} />
             <mesh name="node3" geometry={nodes.node3.geometry} material={materials['blade mat']} />
-            <mesh name="Wesn" geometry={nodes.Wesn.geometry} material={materials['wesn logo']} position={[0.001, -0.005, 0]} rotation={[-1.569, -0.003, 0.006]} scale={[0.828, 0.792, 0.828]} />
+            <mesh name="Wesn" geometry={nodes.Wesn.geometry} material={materials.Wesn_baked} position={[0.001, -0.00465, 0]} rotation={[-1.569, -0.003, 0.006]} scale={[0.828, 0.792, 0.828]} />
           </mesh>
           <mesh name="node0" geometry={nodes.node0.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
           <mesh name="node10" geometry={nodes.node10.geometry} material={materials.Part__Feature} position={[-0.302, -0.405, 0]} scale={7.944} />
