@@ -24,6 +24,9 @@ function App() {
     <>
       <Canvas
         gl={{
+          antialias: false,
+          powerPreference: "high-performance",
+          stencil: false,
           outputColorSpace: LinearSRGBColorSpace
         }}
         className={`bg-transparent ${TESTING ? 'h-96' : ''}`}
@@ -47,7 +50,7 @@ function App() {
         </EffectComposer>}
 
         <Html fullscreen
-        className={`flex items-center justify-center ${isTablet ? 'gap-60 text-xl': isMobile ? 'gap-28 text-sm' : 'gap-96 text-lg'} ${loadingProgress >= 100 ? 'animate-none':'animate-pulse'}  ${loadingProgress >= 100 ? 'animate-none bg-transparent':'animate-pulse bg-slate-100'}`}>
+        className={`flex items-center justify-center ${isTablet ? 'gap-60 text-xl': isMobile ? 'gap-28 text-sm' : 'gap-96 text-lg'} ${loadingProgress >= 100 ? 'animate-none bg-transparent':'animate-pulse bg-slate-100'}`}>
           <div className={`${loadingProgress >= 100 ? 'hidden':'visible'}`}>
             <svg className="animate-spin -ml-1 mr-3 h-8 w-8 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
