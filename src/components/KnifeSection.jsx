@@ -76,13 +76,13 @@ const KnifeSection = (props) => {
         markers: TESTING,
         onUpdate: (t) => {
           gsap.to(settings, {
+            immediateRender: true,
             translateY: t.progress > 0 ? (isTablet || isMobile ? -0.1 : -0.3) : 1,
             ease: "power1.out",
           });
           gsap.to(settings, {
             // ADD gsap animation options here.
             progress: t.progress,
-            immediateRender: true,
             ease: "power1.out",
             // ease: customEase
           });
@@ -92,7 +92,6 @@ const KnifeSection = (props) => {
             stagger: .3,
             y: t.progress > .2 ? 0 : 100,
             opacity: t.progress > .2 ? 1 : 0,
-            immediateRender: true,
             ease: "power1.out",
           });
         },
@@ -115,7 +114,7 @@ const KnifeSection = (props) => {
     //   }
     // });
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [settings]);
+  }, []);
 
   useEffect(() => {
     setDuration(actions["node2Action"].getClip().duration - 0.100000000000001);
