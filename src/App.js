@@ -19,7 +19,7 @@ function App() {
     progress: loadingProgress
   } = useProgress();
   const GPUTier = useDetectGPU();
-  console.log(GPUTier.tier);
+
   return (
     <>
       <Canvas
