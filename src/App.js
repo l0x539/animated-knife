@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber';
 // import Knife from './components/Knife';
-import { Environment, Html, OrbitControls, useDetectGPU, useProgress } from '@react-three/drei';
+import { Environment, OrbitControls, useDetectGPU, useProgress } from '@react-three/drei';
 import { LinearSRGBColorSpace } from 'three';
 import { lazy } from 'react';
 import { CONTROLS, ORBIT, TESTING } from './utils/constants.js';
@@ -37,7 +37,7 @@ function App() {
           antialias: false,
           powerPreference: "high-performance",
           stencil: false,
-          outputColorSpace: LinearSRGBColorSpace
+          //outputColorSpace: LinearSRGBColorSpace
         }}
         className={`bg-transparent ${TESTING ? 'h-96' : ''}`}
         camera={{
@@ -55,9 +55,9 @@ function App() {
           blur={0.5}
         />
         {ORBIT ? <OrbitControls /> : <></>}
-        {navigator.userAgent.indexOf('Mac OS X') !== -1 || GPUTier.tier < 3 ? <></>: <EffectComposer disableNormalPass >
+        {/*{navigator.userAgent.indexOf('Mac OS X') !== -1 || GPUTier.tier < 3 ? <></>: <EffectComposer disableNormalPass >
           <N8AO aoRadius={50} distanceFalloff={0.2} intensity={3} screenSpaceRadius halfRes />
-        </EffectComposer>}
+      </EffectComposer>}*/}
       </Canvas>
     </>
   );
