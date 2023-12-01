@@ -1,0 +1,54 @@
+.text-in-front-of-knife,
+.text-behind-knife {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+  text-align: justify;
+  width: 410px
+}
+
+.text-in-front-of-knife {
+  color: #161616;
+  z-index: 10;
+  font-size: 2.5em;
+  margin-top: 170px;
+}
+
+.text-behind-knife {
+  color: #9f8561;
+  z-index: -1;
+  line-height: 1em;
+  margin-top: -50px;
+  font-size: 7em;
+}
+
+.text-in-front-of-knife .word-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.text-in-front-of-knife .word-wrapper span {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 768px) {
+  .text-behind-knife {
+    font-size: 15em;
+  }
+
+  .text-in-front-of-knife {
+    font-size: 5em;
+    line-height: 1em;
+    margin-top: 240px;
+  }
+
+  .text-in-front-of-knife,
+  .text-behind-knife {
+    text-align: center;
+    width: 100%
+  }
+}

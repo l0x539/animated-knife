@@ -2,6 +2,7 @@
   "name": "animated-knife",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://wesn.com/cdn/shop/t/49/assets",
   "dependencies": {
     "@react-three/drei": "^9.88.10",
     "@react-three/fiber": "^8.15.9",
