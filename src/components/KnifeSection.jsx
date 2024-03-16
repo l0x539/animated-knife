@@ -93,7 +93,7 @@ const KnifeSection = (props) => {
         },
       },
     });
-  }, []);
+  }, [isMobile, isTablet, settings]);
 
   useEffect(() => {
     setDuration(actions["node2Action"].getClip().duration - 0.100000000000001);
